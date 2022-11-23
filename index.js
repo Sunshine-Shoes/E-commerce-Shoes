@@ -87,6 +87,7 @@ for (const product of products){
         <p class="description">${product.description}</p>
         <h3 class="price">${product.price} EUR</h3>`;
 
+        
     const productDivElement = document.createElement("div");
     productDivElement.innerHTML = productTemplate;
     productListElement.appendChild(productDivElement);
