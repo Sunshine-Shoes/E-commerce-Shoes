@@ -1,4 +1,13 @@
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 50px;
+}
+
+.image,
+.name,
+.description,
+.price {
+  margin-bottom: 20px;
 }

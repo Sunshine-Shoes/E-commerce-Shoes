@@ -10,6 +10,7 @@
     --color-violet:#6F4C5B;
     --color-violetLigth:#A19882;
     --color-gray:#536162;
+    list-style: none;
 }
 
 body {
@@ -19,5 +20,12 @@ body {
     font-family: 'Chivo', sans-serif;
     /* align-items: center;
     justify-content: center; */
+    margin: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+    .product-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
