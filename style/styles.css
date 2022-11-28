@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --color-violet:#6F4C5B;
+    --color-violetLigth:#A19882;
+    --color-gray:#536162;
 }
 
 body {
