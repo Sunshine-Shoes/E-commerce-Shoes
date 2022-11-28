@@ -7,9 +7,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --color-violet:#6F4C5B;
-    --color-violetLigth:#A19882;
-    --color-gray:#536162;
+    --color-black:#000000;
+    --color-violet:#150050;
+    --color-violetLigth:#3F0071;
+    --color-violetXLigth:#610094;
     list-style: none;
 }
 
