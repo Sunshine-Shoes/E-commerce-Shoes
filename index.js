@@ -1,19 +1,19 @@
 const products = [
     {
-        name: 'ZAPATO TACÓN VINILO ADORNO',
-        description: 'Zapato de tacón destalonado de vinilo. Detalle de adorno con brillos en la parte delantera.',
+        name: 'Botas de grafitty',
+        description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
-        price: 49.95
+        price: 100.95
     },
     {
-        name: 'ZAPATO TACÓN VINILO ADORNO',
-        description: 'Zapato de tacón destalonado de vinilo. Detalle de adorno con brillos en la parte delantera.',
+        name: 'Botas motocicleta hebillas',
+        description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
         image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
-        price: 49.95
+        price: 99.95
     },
     {
-        name: 'SANDALIA METALIZADA POMPÓN',
-        description: 'Zapato de tacón tipo sandalia con acabado efecto metalizado.',
+        name: 'Botas motocicleta correas',
+        description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botin con suela lisa.jpg',
         price: 39.95
     }, 
@@ -45,8 +45,7 @@ for (const product of products){
         <h2 class="name">${product.name}</h2>
         <p class="description">${product.description}</p>
         <h3 class="price">${product.price} EUR</h3>`;
-
-        
+    
     const productDivElement = document.createElement("div");
     productDivElement.innerHTML = productTemplate;
     productListElement.appendChild(productDivElement);
