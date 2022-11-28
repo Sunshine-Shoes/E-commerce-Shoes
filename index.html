@@ -9,17 +9,25 @@
   </head>
   <body>
     <header>
-        <nav>
-            <h1>Sunshine Shoes</h1>
-            <ul>
-                <li>Iniciar Sesión</li>
-                <li></li>
+        <nav class="navContainer">
+            <h1>S<span>unshine</span>S<span>hoes</span></h1>
+            <ul class="textNav">
+                <li>INICIAR SESIÓN</li>
+                <li>AYUDA</li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#modal">
+                        <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
+                    </a>
+                    <a class="text-white" href="index.html">Volver</a>
+                </li>
             </ul>
+            
         </nav>
         <main>
             <section class="product-list"></section>
         </main>
     </header>
+    
     <script src="./index.js"></script>
 </body>
 </html>
