@@ -11,3 +11,19 @@
 .price {
   margin-bottom: 20px;
 }
+
+.button{
+    width:2.5%;
+    height:2%;
+    font-size: 15px;
+    text color:var(--color-black); 
+    text-align: center;
+    text-decoration: double;
+    background-color:var(--color-violetXLigth);
+    text-align: center;
+    text-decoration: double;
+    margin: 5px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
