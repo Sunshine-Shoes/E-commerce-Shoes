@@ -35,7 +35,32 @@ const products = [
         description: 'Zapato de tacón destalonado de vinilo. Detalle de adorno con brillos en la parte delantera.',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         price: 49.95
-    }, 
+    },
+    {
+        name: 'Botas de grafitty',
+        description: 'Botas de plataforma,botas góticas, botas moteras',
+        image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
+        price: 100.95
+        
+    },
+    {
+        name: 'Botas motocicleta hebillas',
+        description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
+        image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
+        price: 99.95
+    },
+    {
+        name: 'Botas motocicleta correas',
+        description: 'Botas de plataforma,botas góticas, botas moteras',
+        image: './assets/imagenes/shoes-photos/Botin con suela lisa.jpg',
+        price: 39.95
+    },
+    {
+        name: 'Botas motocicleta hebillas',
+        description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
+        image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
+        price: 99.95
+    },  
     
 ];
 
