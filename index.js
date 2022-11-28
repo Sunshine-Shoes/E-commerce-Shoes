@@ -4,6 +4,7 @@ const products = [
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         price: 100.95
+        
     },
     {
         name: 'Botas motocicleta hebillas',
@@ -44,7 +45,10 @@ for (const product of products){
         <img class="image" src="${product.image}" alt="${product.name}">
         <h2 class="name">${product.name}</h2>
         <p class="description">${product.description}</p>
-        <h3 class="price">${product.price} EUR</h3>`;
+        <h3 class="price">${product.price} EUR</h3>
+        <input onClick="#" class=button value="-" name="boton0">
+        <input onClick="#" class=button value="+" name="boton1">`;
+               
     
     const productDivElement = document.createElement("div");
     productDivElement.innerHTML = productTemplate;
