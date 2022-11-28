@@ -13,10 +13,10 @@
 }
 
 .button{
-    width:2.5%;
-    height:2%;
-    font-size: 15px;
-    text color:var(--color-black); 
+    width:4.5%;
+    height:4%;
+    font-size: 20px;
+    color: white;
     text-align: center;
     text-decoration: double;
     background-color:var(--color-violetXLigth);
