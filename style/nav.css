@@ -1,0 +1,24 @@
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+
+}
+span {
+    color: #150050;
+    font-size: 3.4rem;
+}
+h1{
+   color: #610094;
+   font-size: 3.4rem;
+}
+
+.textNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #6F4C5B;
+}
