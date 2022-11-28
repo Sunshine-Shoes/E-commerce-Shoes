@@ -1,0 +1,36 @@
+.copyright{
+    width: 80%;
+  }
+  
+  .siteFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .socialIcon{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+  }
+  
+  .facebook {
+    width: 15%;
+    height: 15%;
+    padding-left: 5%;
+  }
+  
+  .instagram {
+    width: 15%;
+    height: 15%;
+    padding-left: 5%;
+  }
+  
+  .whatsapp {
+    width: 15%;
+    height: 15%;  
+    padding-left: 5%;
+  }
+  
