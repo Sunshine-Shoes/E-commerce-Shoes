@@ -18,7 +18,16 @@ h1{
 .textNav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 1.3rem;
     color: #6F4C5B;
+}
+.paddingText{
+   margin-right: 3.0rem;
+}
+.paddingLogo {
+    margin-left: 3.0rem;
+}
+.marginTop {
+    margin-top: 2.0rem;
 }
