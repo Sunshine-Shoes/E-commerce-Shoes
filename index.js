@@ -137,7 +137,8 @@ function addProductCart (id){
     cart.push(item)
     console.log(cart)
 }
-const showcart = () => {
+const showcart = () => 
+{
     const modalBody= document.querySelector(".modal-body");
     if (modalBody) {
     modalBody.innerHTML="";
@@ -160,3 +161,4 @@ const showcart = () => {
       `;
     });
   }
+}
