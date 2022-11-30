@@ -1,7 +1,7 @@
 const products = [
     {
         id:1,
-        name: 'Botas de grafitty',
+        name: 'Botas grafitty',
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         talle: 38,
@@ -13,7 +13,7 @@ const products = [
     },
     {
         id:2,
-        name: 'Botas motocicleta hebillas',
+        name: 'Botas hebillas',
         description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
         image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
         talle: 38,
@@ -24,7 +24,7 @@ const products = [
     },
     {
         id:3,
-        name: 'Botas motocicleta correas',
+        name: 'Botas correas',
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botin con suela lisa.jpg',
         talle: 38,
@@ -46,7 +46,7 @@ const products = [
     }, 
     {
         id:5,
-        name: 'Botines de suela track ',
+        name: 'Botines track ',
         description: 'Botín acharolado, suela dentada tipo track, tacón.',
         image: './assets/imagenes/shoes-photos/Botines de suela.jpg',
         talle: 38,
@@ -57,7 +57,7 @@ const products = [
     },
     {
         id:6,
-        name: 'Botas de grafitty',
+        name: 'Botas grafitty',
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         talle: 38,
@@ -68,7 +68,7 @@ const products = [
     },
     {
         id:7,
-        name: 'Botas de grafitty',
+        name: 'Botas grafitty',
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         talle: 38,
@@ -80,7 +80,7 @@ const products = [
     },
     {
         id:8,
-        name: 'Botas motocicleta hebillas',
+        name: 'Botas hebillas',
         description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
         image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
         talle: 38,
@@ -91,7 +91,7 @@ const products = [
     },
     {
         id:9,
-        name: 'Botas motocicleta correas',
+        name: 'Botas correas',
         description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botin con suela lisa.jpg',
         talle: 38,
@@ -102,7 +102,7 @@ const products = [
     },
     {
         id:10,
-        name: 'Botas motocicleta hebillas',
+        name: 'Botas hebillas',
         description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
         image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
         talle: 38,
@@ -117,7 +117,7 @@ const products = [
 let cart= [];
 
 const productListElement = document.querySelector(".product-list");
-const carritoContenedor = document.querySelector('#carritoContenedor');
+const cartContainer = document.querySelector('#cartContainer');
 
 for (const product of products){
     const productTemplate = `
@@ -149,16 +149,16 @@ const showcart = () => {
     modalBody.innerHTML += `
         <div class= "modal-container">
             <div>
+                <p>Producto: ${name}</p>
                 <img class="img-fluid img-cart" src="${image}"/>
             </div>
         <div>
-            <p>Producto: ${name}</p>
             <p>Precio: ${price}</p>
             <p>Cantidad: ${amount}</p>
             <p>Color: ${color}</p>
             <p>Talla: ${talle}</p>
             <p>Ref: ${ref}</p>
-            <button class="btn btn-danger" onclick="eliminarProducto(${id})">Eliminar producto</button>
+            <button class="btn btn-danger" onclick="deleteProduct(${id})">Eliminar producto</button>
             </div>
         </div>
       
@@ -166,7 +166,10 @@ const showcart = () => {
       `;
     });
 
-    carritoContenedor.textContent = cart.length;
+    cartContainer.textContent = cart.length;
 }
-
-
+function deleteProduct (id)  {
+const juegoId = id;
+cart = cart.filter((juego) => juego.id !== juegoId );
+showcart();
+}
