@@ -100,18 +100,7 @@ const products = [
         amount: 1,
         price: 39.95
     },
-    {
-        id:10,
-        name: 'Botas hebillas',
-        description: 'Botas de plataforma,botas góticas, botas moteras, tacones altos',
-        image: './assets/imagenes/shoes-photos/Botas góticas.jpg',
-        talle: 38,
-        ref: 2014,
-        color: 'black',
-        amount: 1,
-        price: 99.95
-    },  
-    
+   
 ];
 
 let cart= [];
