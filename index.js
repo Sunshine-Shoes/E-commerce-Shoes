@@ -108,8 +108,7 @@ let cart= [];
 const productListElement = document.querySelector(".product-list");
 const cartContainer = document.querySelector('#cartContainer');
 const emptyCart = document.querySelector("#emptyCart");
-
-
+const totalCart = document.querySelector("#total-cart");
 
 for (const product of products){
     const productTemplate = `
@@ -176,6 +175,7 @@ const showcart = () => {
       };
     
     cartContainer.textContent = cart.length;
+    totalCart.innerText = cart.reduce((acc, product) => acc + product.amount * product.price, 0);
 }
 function deleteProduct (id)  {
 const juegoId = id;
