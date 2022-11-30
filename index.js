@@ -118,21 +118,35 @@ let cart= [];
 
 const productListElement = document.querySelector(".product-list");
 const cartContainer = document.querySelector('#cartContainer');
+const emptyCart = document.querySelector("#emptyCart");
+
+
 
 for (const product of products){
     const productTemplate = `
-        <img class="image" src="${product.image}" alt="${product.name}">
+        <div class="card  mt-3" style="width: 32rem;">
+        <img class="image card-img-top mt-2" src="${product.image}" alt="${product.name}">
+        <div class="card-body">
         <h2 class="name">${product.name}</h2>
         <p class="description">${product.description}</p>
         <h3 class="price">${product.price} EUR</h3>
         <input onClick="#" class=button value="-" name="boton0">
         <input onClick="#" class=button value="+" name="boton1">
-        <button onclick="addProductCart (${product.id})">Agregar al carrito</button>`;
+        <button onclick="addProductCart (${product.id})">Agregar al carrito</button>
+        </div>  
+        </div>`;
 
     const productDivElement = document.createElement("div");
     productDivElement.innerHTML = productTemplate;
     productListElement.appendChild(productDivElement);
 }
+
+
+emptyCart.addEventListener("click" , () => {
+    cart.length = [];
+    showcart();
+});
+
 
 function addProductCart (id){
     const item= products.find((product) => product.id === id)
