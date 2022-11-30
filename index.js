@@ -35,8 +35,8 @@ const products = [
     }, 
     {
         id:4,
-        name: 'BOTÍN PLANO LLUVIA',
-        description: 'Botín plano engomado resistente al agua. Combinación de goma con efecto rugoso y neopreno en el corte. Tiradores en la parte delantera y trasera para facilitar el calce. Suela dentada tipo track.',
+        name: 'Botin tatoo ',
+        description: 'Botín plano engomado resistente al agua. Suela dentada tipo track.',
         image: './assets/imagenes/shoes-photos/Botin gótico.jpg',
         talle: 38,
         ref: 2020,
@@ -46,8 +46,8 @@ const products = [
     }, 
     {
         id:5,
-        name: 'MOCASÍN TRACK ADORNO',
-        description: 'Zapato plano tipo mocasín con acabado brillante. Copete subido y antifaz con adorno metálico. Suela dentada tipo track.',
+        name: 'Botines de suela track ',
+        description: 'Botín acharolado, suela dentada tipo track, tacón.',
         image: './assets/imagenes/shoes-photos/Botines de suela.jpg',
         talle: 38,
         ref: 2019,
@@ -57,8 +57,8 @@ const products = [
     },
     {
         id:6,
-        name: 'ZAPATO TACÓN VINILO ADORNO',
-        description: 'Zapato de tacón destalonado de vinilo. Detalle de adorno con brillos en la parte delantera.',
+        name: 'Botas de grafitty',
+        description: 'Botas de plataforma,botas góticas, botas moteras',
         image: './assets/imagenes/shoes-photos/Botas alternativas góticas.jpg',
         talle: 38,
         ref: 2018,
@@ -117,6 +117,8 @@ const products = [
 let cart= [];
 
 const productListElement = document.querySelector(".product-list");
+const carritoContenedor = document.querySelector('#carritoContenedor');
+
 for (const product of products){
     const productTemplate = `
         <img class="image" src="${product.image}" alt="${product.name}">
@@ -134,31 +136,37 @@ for (const product of products){
 
 function addProductCart (id){
     const item= products.find((product) => product.id === id)
-    cart.push(item)
-    console.log(cart)
-}
-const showcart = () => 
-{
-    const modalBody= document.querySelector(".modal-body");
-    if (modalBody) {
-    modalBody.innerHTML="";
-    cart.forEach ((product) => {
-    const { id, name, talle, ref, color, price, image }= product;
+    cart.push(item);
+    showcart();
+};
+
+const showcart = () => {
+    const modalBody= document.querySelector(".modal .modal-body");
+
+    modalBody.innerHTML = "";
+    cart.forEach((product) => {
+    const { id, name, talle, ref, color, price, image, amount }= product;
     modalBody.innerHTML += `
-    <div class= "modal-container">
-    <div>
-        <img class="img-fluid img-cart" src="${image}"/>
-    </div>
-    <div>
-        <p>Producto: ${name}</p>
-        <p>Precio: ${price}</p>
-        <p>Cantidad: ${amount}</p>
-        <button class="btn btn-danger" onclick="eliminarProducto(${id})">Eliminar producto</button>
+        <div class= "modal-container">
+            <div>
+                <img class="img-fluid img-cart" src="${image}"/>
+            </div>
+        <div>
+            <p>Producto: ${name}</p>
+            <p>Precio: ${price}</p>
+            <p>Cantidad: ${amount}</p>
+            <p>Color: ${color}</p>
+            <p>Talla: ${talle}</p>
+            <p>Ref: ${ref}</p>
+            <button class="btn btn-danger" onclick="eliminarProducto(${id})">Eliminar producto</button>
+            </div>
         </div>
-      </div>
       
   
       `;
     });
-  }
+
+    carritoContenedor.textContent = cart.length;
 }
+
+

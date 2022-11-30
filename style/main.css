@@ -13,17 +13,18 @@
 }
 
 .button{
-    width:4.5%;
-    height:4%;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    text-decoration: double;
-    background-color:var(--color-violetXLigth);
-    text-align: center;
-    text-decoration: double;
-    margin: 5px;
-    margin: 5px;
-    padding:10px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+  width:4.5%;
+  height:4%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: double;
+  background-color:var(--color-violetXLigth);
+  text-align: center;
+  text-decoration: double;
+  margin: 5px;
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
