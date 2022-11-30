@@ -137,8 +137,18 @@ emptyCart.addEventListener("click" , () => {
 
 
 function addProductCart (id){
-    const item= products.find((product) => product.id === id)
+    const existingProduct = cart.some(product => product.id === id);
+
+    if (existingProduct) {
+        const product = cart.map(product => {
+            if (product.id === id){
+                product.amount++
+            }
+        })
+    }else {
+        const item= products.find((product) => product.id === id)
     cart.push(item);
+    };
     showcart();
 };
 
