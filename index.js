@@ -169,6 +169,12 @@ const showcart = () => {
       `;
     });
 
+    if (cart.length === 0) {
+        modalBody.innerHTML = `
+        <p class="text-center text-primary parrafo">¡Aun no has añadido nada!</p>
+        `;
+      };
+    
     cartContainer.textContent = cart.length;
 }
 function deleteProduct (id)  {
