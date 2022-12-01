@@ -21,15 +21,15 @@ The user will be able to view all the products that exist, they will be able to 
 ### Technologies :computer:
 ***
 * [HTML5](https://openwebinars.net/blog/que-es-html5/)
- * [CSS3](https://openwebinars.net/blog/que-es-css3/)
- * [JavaScript](https://www.javascript.com/)
+* [CSS3](https://openwebinars.net/blog/que-es-css3/)
+* [JavaScript](https://www.javascript.com/)
 
 
 
 ### Installation :desktop_computer: :electric_plug:
 ***
-$ Open your Visual code and a new terminal
-$ git clone https://github.com/Sunshine-Shoes/E-commerce-Shoes.git
+* Open your Visual code and a new terminal
+* git clone https://github.com/Sunshine-Shoes/E-commerce-Shoes.git
 
 
 ### Authors :couple_with_heart_woman_woman:
