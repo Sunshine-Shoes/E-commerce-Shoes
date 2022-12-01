@@ -112,7 +112,7 @@ const totalCart = document.querySelector("#total-cart");
 
 for (const product of products){
     const productTemplate = `
-        <div class="card  mt-3" style="width: 32rem;">
+        <div class="card  mt-3" style="width: 25rem; height: 45rem;">
         <img class="image card-img-top mt-2" src="${product.image}" alt="${product.name}">
         <div class="card-body">
         <h2 class="name">${product.name}</h2>
