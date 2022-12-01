@@ -23,7 +23,7 @@ The user will be able to view all the products that exist, they will be able to 
 A list of technologies used within the project:
 * [HTML5](https://openwebinars.net/blog/que-es-html5/)
 * [CSS3](https://openwebinars.net/blog/que-es-css3/)
-* [JavaScript](ttps://www.javascript.com/)
+* [JavaScript](https://www.javascript.com/)
 
 
 
