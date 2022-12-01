@@ -2,6 +2,7 @@
 @import url("/style/nav.css");
 @import url("/style/main.css");
 @import url("/style/footer.css");
+@import url("/style/mediaqueries.css");
 
 * {
     margin: 0;
@@ -26,9 +27,15 @@ body {
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .product-list{
         display: flex;
         flex-direction: column;
     }
+
+    .navContainer {
+        display: flex;
+        flex-direction: column;
+    }
 }
+ */
