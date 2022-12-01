@@ -14,15 +14,16 @@ E-commerce project dedicated to the sale of gothic shoes.
 The user will be able to view all the products that exist, they will be able to choose which ones they want to buy, the quantity they want and they will be able to add them to a shopping cart.
 
 ### Screenshot :flower_playing_cards:
-![Image text](./assets/imagenes/****)
-![Image text](./assets/imagenes/$$$$)
+![Desktop](./assets/Readme/Captura1.PNG)
+![Cart](./assets/Readme/Captura2.PNG)
 
 
-### Technologies :computer:
+## Technologies :computer:
 ***
+A list of technologies used within the project:
 * [HTML5](https://openwebinars.net/blog/que-es-html5/)
 * [CSS3](https://openwebinars.net/blog/que-es-css3/)
-* [JavaScript](https://www.javascript.com/)
+* [JavaScript](ttps://www.javascript.com/)
 
 
 
