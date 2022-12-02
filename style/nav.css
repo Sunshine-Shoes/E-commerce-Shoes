@@ -8,18 +8,16 @@
 }
 span {
     color: #150050;
-    font-size: 3.4rem;
 }
 h1{
    color: #610094;
-   font-size: 3.4rem;
 }
 
 .textNav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     color: #6F4C5B;
 }
 .paddingText{
