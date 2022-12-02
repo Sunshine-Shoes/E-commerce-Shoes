@@ -120,7 +120,7 @@ for (const product of products){
         <h3 class="price">${product.price} EUR</h3>
         <input onClick="#" class=button value="-" name="boton0">
         <input onClick="#" class=button value="+" name="boton1">
-        <button onclick="addProductCart (${product.id})">Agregar al carrito</button>
+        <button class="btn btn-dark" onclick="addProductCart (${product.id})">Agregar al carrito</button>
         </div>  
         </div>`;
 
