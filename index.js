@@ -44,6 +44,8 @@ function addProductCart (id){
         const item= products.find((product) => product.id === id)
     cart.push(item);
     };
+
+    swal("Bien hecho!", "Añadido al carrito!", "success");
     showcart();
 };
 
