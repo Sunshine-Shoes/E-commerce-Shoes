@@ -25,7 +25,7 @@ products.forEach((product) => {
     
     container.innerHTML += `
         <div class="card  mt-3" style="width: 25rem; height: 45rem;">
-        <img class="image card-img-top mt-2" src="${image}" alt="${name}">
+            <img class="image card-img-top" src="${image}" alt="${name}">
         <div class="card-body">
         <h2 class="name">${name}</h2>
         <p class="description">${description}</p>
@@ -55,7 +55,7 @@ goCart.addEventListener("click" , () => {
 emptyCartButton.addEventListener("click" , () => {
 
     Swal.fire({
-        title: 'Estas segu@?',
+        title: 'Estas segur@?',
         text: "No podrá revertir esto!",
         icon: 'warning',
         showCancelButton: true,
@@ -142,7 +142,7 @@ function deleteProduct (ref)  {
     const productRef = ref;
     cart = cart.filter((product) => product.ref !== productRef);
     Swal.fire({
-        title: 'Estas segu@?',
+        title: 'Estas segur@?',
         text: "No podrá revertir esto!",
         icon: 'warning',
         showCancelButton: true,

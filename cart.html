@@ -24,7 +24,7 @@
         </nav>
     </header>
 
-    <button id="activateFunction" class="btn btn-secondary boton mt-2">¡Click!</button>
+    <button id="activateFunction" class="btn btn-secondary boton mt-2">¡Haz click para rellenar tu carrito!</button>
 
     <main>
         <div class="container">
@@ -32,20 +32,7 @@
                 <div class="col">
                     <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
                     <form id="procesar-pago" method="POST">
-                        <div class="form-group row">
-                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
-                            <div class="col-12 col-md-10">
-                                <input type="text" class="form-control" id="cliente"
-                                    placeholder="Ingresa nombre cliente" name="persona">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
-                            <div class="col-12 col-md-10">
-                            <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
-                            </div>
-                        </div>
-
+    
                         <div id="cart" class="form-group table-responsive">
                             <table class="table" id="shoppingList">
                                 <thead>
@@ -54,6 +41,9 @@
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Precio</th>
                                         <th scope="col">Cantidad</th>
+                                        <th scope="col">Talla</th>
+                                        <th scope="col">Ref</th>
+                                        <th scope="col">Color</th>
                                         <th scope="col">Sub Total</th>
                                     </tr>
 
@@ -81,9 +71,6 @@
                         <div class="row justify-content-between">
                             <div class="col-md-4 mb-2">
                                 <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                 <input type="submit" class="btn btn-success btn-block" id="button" value="Finalizar compra" >
                             </div>
                         </div>
                     </form>
