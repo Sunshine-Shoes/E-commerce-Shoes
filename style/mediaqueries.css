@@ -1,16 +1,27 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 949px) {
     .product-list{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
     }
 
     .navContainer {
         display: flex;
         flex-direction: column;
     }
-
-    .textNav {
+    .container-fluid{
         display: flex;
-        flex-direction: column;
-    }
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        background-color: white;
+        justify-items: center;
 }
+    .collapse{
+        display: flex;
+        justify-content: left;
+}
+    }

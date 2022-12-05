@@ -26,3 +26,11 @@ h1{
 .paddingLogo {
     margin-left: 3.0rem;
 }
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+.container-fluid{
+    background-color: white;
+    padding-top: 2%;
+}
