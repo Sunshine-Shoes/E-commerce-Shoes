@@ -105,7 +105,7 @@ const updateModal = () => {
     
         modalBody.innerHTML = "";
         cart.forEach((product) => {
-        const { id, name, talle, ref, color, price, image, amount } = product;
+        const { name, talle, ref, color, price, image, amount } = product;
         modalBody.innerHTML += `
             <div class= "modal-container">
                 <div>
@@ -118,7 +118,7 @@ const updateModal = () => {
                 <p>Color: ${color}</p>
                 <p>Talla: ${talle}</p>
                 <p>Ref: ${ref}</p>
-                <button class="btn btn-danger" onclick="deleteProduct(${id})">Eliminar producto</button>
+                <button class="btn btn-danger" onclick="deleteProduct(${ref})">Eliminar producto</button>
                 </div>
             </div>
         
@@ -139,8 +139,9 @@ const updateModal = () => {
 };
 
 function deleteProduct (ref)  {
-const productRef = ref;
-cart = cart.filter((product) => product.ref !== productRef );
+    const productRef = ref;
+    cart = cart.filter((product) => product.ref !== productRef);
+    
 updateModal();
 }
 
