@@ -8,7 +8,7 @@ const products = [
         ref: 2023,
         color: 'black',
         amount: 1,
-        price: 100.95
+        price: 100
         
     },
     {
@@ -20,7 +20,7 @@ const products = [
         ref: 2022,
         color: 'black',
         amount: 1,
-        price: 99.95
+        price: 99
     },
     {
         id:3,
@@ -31,7 +31,7 @@ const products = [
         ref: 2021,
         color: 'black',
         amount: 1,
-        price: 39.95
+        price: 40
     }, 
     {
         id:4,
@@ -42,7 +42,7 @@ const products = [
         ref: 2020,
         color: 'black',
         amount: 1,
-        price: 129.00
+        price: 129
     }, 
     {
         id:5,
@@ -53,7 +53,7 @@ const products = [
         ref: 2019,
         color: 'black',
         amount: 1,
-        price: 39.95
+        price: 40
     },
     {
         id:6,
@@ -64,7 +64,7 @@ const products = [
         ref: 2018,
         color: 'black',
         amount: 1,
-        price: 49.95
+        price: 50
     },
     {
         id:7,
@@ -75,7 +75,7 @@ const products = [
         ref: 2017,
         color: 'black',
         amount: 1,
-        price: 100.95
+        price: 100
         
     },
     {
@@ -87,7 +87,7 @@ const products = [
         ref: 2016,
         color: 'black',
         amount: 1,
-        price: 99.95
+        price: 110
     },
     {
         id:9,
@@ -98,7 +98,7 @@ const products = [
         ref: 2015,
         color: 'black',
         amount: 1,
-        price: 39.95
+        price: 40
     },
    
 ];
