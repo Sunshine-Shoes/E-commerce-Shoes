@@ -1,5 +1,6 @@
 let cart= [];
 
+const container = document.querySelector("#container");
 const productListElement = document.querySelector(".product-list");
 const cartContainer = document.querySelector('#cartContainer');
 const emptyCartButton = document.querySelector("#emptyCart");
@@ -7,23 +8,22 @@ const totalCart = document.querySelector("#total-cart");
 const goCart = document.querySelector("#goCart");
 const activateFunction = document.querySelector("#activateFunction");
 
-console.log('foo' + activateFunction);
-
 if(activateFunction) {
-    activateFunction.addEventListener("click", function () { console.log("activate"); processOrder(); });  
+    activateFunction.addEventListener("click", processOrder);  
 };
 
 document.addEventListener("DOMContentLoaded", () => {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
+
     updateModal();
- 
+    document.querySelector("#activateFunction").click(processOrder);
 }); 
 
 products.forEach((product) => {
     const {image, name, description, price, ref} = product;
 
-    const productTemplate = `
+    
+    container.innerHTML += `
         <div class="card  mt-3" style="width: 25rem; height: 45rem;">
         <img class="image card-img-top mt-2" src="${image}" alt="${name}">
         <div class="card-body">
@@ -35,10 +35,7 @@ products.forEach((product) => {
         <button class="btn btn-dark" onclick="addProductCart(${ref})">Agregar al carrito</button>
         </div>  
         </div>`;
-
-    const productDivElement = document.createElement("div");
-    productDivElement.innerHTML = productTemplate;
-    productListElement.appendChild(productDivElement);
+    
 });
 
 goCart.addEventListener("click" , () => {
@@ -58,19 +55,19 @@ goCart.addEventListener("click" , () => {
 emptyCartButton.addEventListener("click" , () => {
 
     Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Estas segu@?',
+        text: "No podrá revertir esto!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Si, borrar!'
       }).then((result) => {
         if (result.isConfirmed) {
         
           Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Borrado!',
+            'Tu producto ha sido eliminado.',
             'success'
           )
           emptyCart();
@@ -102,32 +99,33 @@ function addProductCart(ref) {
     updateModal();
 };
 
+
 const updateModal = () => {
     const modalBody= document.querySelector(".modal .modal-body");
-
-    modalBody.innerHTML = "";
-    cart.forEach((product) => {
-    const { id, name, talle, ref, color, price, image, amount } = product;
-    modalBody.innerHTML += `
-        <div class= "modal-container">
+    
+        modalBody.innerHTML = "";
+        cart.forEach((product) => {
+        const { id, name, talle, ref, color, price, image, amount } = product;
+        modalBody.innerHTML += `
+            <div class= "modal-container">
+                <div>
+                    <p>Producto: ${name}</p>
+                    <img class="img-fluid img-cart" src="${image}"/>
+                </div>
             <div>
-                <p>Producto: ${name}</p>
-                <img class="img-fluid img-cart" src="${image}"/>
+                <p>Precio: ${price}</p>
+                <p>Cantidad: ${amount}</p>
+                <p>Color: ${color}</p>
+                <p>Talla: ${talle}</p>
+                <p>Ref: ${ref}</p>
+                <button class="btn btn-danger" onclick="deleteProduct(${id})">Eliminar producto</button>
+                </div>
             </div>
-        <div>
-            <p>Precio: ${price}</p>
-            <p>Cantidad: ${amount}</p>
-            <p>Color: ${color}</p>
-            <p>Talla: ${talle}</p>
-            <p>Ref: ${ref}</p>
-            <button class="btn btn-danger" onclick="deleteProduct(${id})">Eliminar producto</button>
-            </div>
-        </div>
-      
-  
-      `;
-    });
-
+        
+    
+        `;
+        });
+    
     if (cart.length === 0) {
         modalBody.innerHTML = `
         <p class="text-center text-primary parrafo">¡Aun no has añadido nada!</p>
@@ -156,7 +154,7 @@ function processOrder() {
         const shoppingList = document.querySelector("#shoppingList tbody");
         const { name, talle, ref, color, price, image, amount } = product;
     
-        const row = document.createElement("row");
+        const row = document.createElement("tr");
         row.innerHTML += `
         <td>
          <img class="img-fluid img-cart" src="${image}"/>
