@@ -2,7 +2,7 @@ const products = [
     {
         id:1,
         name: 'Botas grafitty',
-        description: 'Botas de plataforma,botas góticas, botas moteras',
+        description: 'Botas de plataforma,botas góticas, botas grafitty',
         image: "./assets/imagenes/shoes-photos/botasAlternativasGoticas.jpg",
         talle: 38,
         ref: 2023,
