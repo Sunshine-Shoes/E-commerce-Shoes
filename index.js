@@ -4,7 +4,7 @@ const container = document.querySelector("#container");
 const productListElement = document.querySelector(".product-list");
 const cartContainer = document.querySelector('#cartContainer');
 const emptyCartButton = document.querySelector("#emptyCart");
-const totalCart = document.querySelector("#total-cart");
+const totalCart = document.querySelector("#totalCart");
 const goCart = document.querySelector("#goCart");
 const activateFunction = document.querySelector("#activateFunction");
 
@@ -30,9 +30,8 @@ products.forEach((product) => {
         <h2 class="name">${name}</h2>
         <p class="description">${description}</p>
         <h3 class="price">${price} EUR</h3>
-        <input onClick="#" class=button value="-" name="boton0">
-        <input onClick="#" class=button value="+" name="boton1">
         <button class="btn btn-dark" onclick="addProductCart(${ref})">Agregar al carrito</button>
+        <button class="btn btn-outline-dark" onclick="deleteProduct(${ref})">Eliminar del carrito</button>
         </div>  
         </div>`;
     
@@ -53,26 +52,33 @@ goCart.addEventListener("click" , () => {
 })
 
 emptyCartButton.addEventListener("click" , () => {
-
-    Swal.fire({
-        title: 'Estas segur@?',
-        text: "No podrá revertir esto!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, borrar!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-        
-          Swal.fire(
-            'Borrado!',
-            'Tu producto ha sido eliminado.',
-            'success'
-          )
-          emptyCart();
-        }
-      })
+    if(cart.length === 0) {
+        Swal.fire({
+            title: "¡Tu carrito está vacio!",
+            text: "Compra algo para continuar con la compra",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+          });
+    } else {
+        Swal.fire({
+            title: 'Estas segur@?',
+            text: "No podrá revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, borrar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Borrado!',
+                    'Tu producto ha sido eliminado.',
+                    'success'
+                    )
+                emptyCart();
+            };
+        });
+    };
 });
 
 function addProductCart(ref) {
@@ -113,7 +119,7 @@ const updateModal = () => {
                     <img class="img-fluid img-cart" src="${image}"/>
                 </div>
             <div>
-                <p>Precio: ${price}</p>
+                <p>Precio: ${price}€</p>
                 <p>Cantidad: ${amount}</p>
                 <p>Color: ${color}</p>
                 <p>Talla: ${talle}</p>
@@ -178,12 +184,12 @@ function processOrder() {
          <img class="img-fluid img-cart" src="${image}"/>
         </td>
         <td>${name}</td>
-        <td>${price}</td>
+        <td>${price}€</td>
         <td>${amount}</td>
         <td>${talle}</td>
         <td>${ref}</td>
         <td>${color}</td>
-        <td>${price * amount}</td>
+        <td>${price * amount}€</td>
         `;
 
         shoppingList.appendChild(row);
