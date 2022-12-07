@@ -37,12 +37,6 @@ if(activateFunction) {
     activateFunction.addEventListener("click", processOrder);  
 };
 
-/* document.addEventListener("DOMContentLoaded", () => {
-    cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    document.querySelector("#activateFunction").click(processOrder);
-});  */
-
 goCart.addEventListener("click" , () => {
     if(cart.length === 0) {
         Swal.fire({
