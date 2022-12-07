@@ -11,14 +11,18 @@ function processOrder() {
         const row = document.createElement("tr");
         row.innerHTML += `
         <td>
+        <h3>${name}</h3>
          <img class="img-fluid img-cart" src="${image}"/>
         </td>
-        <td>${name}</td>
-        <td>${price}€</td>
-        <td>${amount}</td>
-        <td>${talle}</td>
-        <td>${ref}</td>
-        <td>${color}</td>
+        <td>
+            <ul class= "textlistcart">
+                <li>Precio:  ${price}€ </li>
+                <li>Cantidad:  ${amount}</li>
+                <li>Talla:  ${talle}</li>
+                <li>Ref:  ${ref}</li>
+                <li>Color: ${color}</li>
+            </ul>
+       </td>
         <td>${price * amount}€</td>
         `;
 
