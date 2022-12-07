@@ -91,7 +91,6 @@ function emptyCart() {
 
 document.addEventListener("DOMContentLoaded", () => {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    updateModal();
+    document.querySelector("#activateFunction").click(processOrder);
 }); 
 
