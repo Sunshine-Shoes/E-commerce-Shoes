@@ -1,24 +1,8 @@
-.navContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2% auto;
-
-}
 span {
     color: #150050;
 }
 h1{
    color: #610094;
-}
-
-.textNav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    /* font-size: 1.3rem; */
-    color: #6F4C5B;
 }
 .paddingText{
    margin-right: 3.0rem;
@@ -26,11 +10,10 @@ h1{
 .paddingLogo {
     margin-left: 3.0rem;
 }
-.collapse {
-    display: flex;
-    justify-content: flex-end;
-}
 .container-fluid{
-    background-color: white;
     padding-top: 2%;
+}
+.navbar-nav{
+    display: flex;
+    align-items: flex-end
 }

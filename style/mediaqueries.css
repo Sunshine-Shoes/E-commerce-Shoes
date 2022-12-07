@@ -1,27 +1,31 @@
-@media only screen and (min-width: 320px) and (max-width: 949px) {
+@media only screen and (min-width: 320px){
     .product-list{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 1.5rem;
-        justify-items: center;
-    }
-
-    .navContainer {
-        display: flex;
-        flex-direction: column;
+         grid-template-rows: repeat(9, 1fr);
     }
     .container-fluid{
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
         flex-direction: row-reverse;
-        background-color: white;
-        justify-items: center;
+        justify-content: flex-end; 
 }
-    .collapse{
+}
+@media only screen and (min-width: 800px){
+    .product-list{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+   }
+}
+@media only screen and (min-width: 990px){
+    .product-list{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+   }
+   .container-fluid{
+    display: flex;
+    flex-direction: row;
+} 
+    .navbar-collapse {
         display: flex;
-        justify-content: left;
-}
+        flex-direction: row;
+        justify-content: flex-end;
     }
+}

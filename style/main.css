@@ -1,8 +1,8 @@
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 1rem;
   justify-items: center;
 }
 
@@ -12,25 +12,6 @@
 .price {
   margin-bottom: 20px;
 }
-
-.button{
-  width:4.5%;
-  height:4%;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  text-decoration: double;
-  background-color:var(--color-violetXLigth);
-  text-align: center;
-  text-decoration: double;
-  margin: 5px;
-  margin: 5px;
-  padding:10px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-}
-
-
 .modal-container{
   display:flex;
   align-items: center;
