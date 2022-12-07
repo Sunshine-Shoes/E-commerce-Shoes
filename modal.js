@@ -8,7 +8,7 @@ const updateModal = () => {
             <div class= "modal-container">
                 <div>
                     <p>Producto: ${name}</p>
-                    <img class="img-fluid img-cart" src="${image}"/>
+                    <img class="img-fluid img-cart" src="${image}" alt="${name}"/>
                 </div>
             <div>
                 <p>Precio: ${price}€</p>

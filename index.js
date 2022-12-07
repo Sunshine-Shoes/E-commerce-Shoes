@@ -1,7 +1,7 @@
 let cart= [];
 
 const container = document.querySelector("#container");
-const productListElement = document.querySelector(".product-list");
+const productListElement = document.querySelector(".product-list"); 
 const cartContainer = document.querySelector('#cartContainer');
 const emptyCartButton = document.querySelector("#emptyCart");
 const totalCart = document.querySelector("#totalCart");
