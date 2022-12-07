@@ -1,5 +1,6 @@
 const activateFunction = document.querySelector("#activateFunction");
 const goCart = document.querySelector("#goCart");
+const totalProcess = document.querySelector("#totalProcess");
 
 function processOrder() {
    
@@ -24,6 +25,8 @@ function processOrder() {
         shoppingList.appendChild(row);
         
     });
+    totalProcess.innerText = cart.reduce((acc, product) => acc + product.amount * product.price, 0);
+
 };
 
 if(activateFunction) {
