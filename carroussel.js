@@ -7,8 +7,8 @@ products.forEach((product) => {
     <div class="carousel-item">
         <img src="${image}" class="d-block w-100" alt="${name}">
         <div class="carousel-caption d-none d-md-block">
-            <h5>${name}</h5>
-            <p>${description}</p>
+            <h5 class="bg-secondary bg-opacity-25 rounded">${name}</h5>
+            <p class="bg-secondary bg-opacity-25 rounded">${description}</p>
         </div>
     </div>
     `; 
