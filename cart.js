@@ -38,7 +38,7 @@ if(activateFunction) {
 };
 
 goCart.addEventListener("click" , () => {
-    if(cart.length === 0) {
+    if(cart === 0) {
         Swal.fire({
             title: "¡Tu carrito está vacio!",
             text: "Compra algo para continuar con la compra",

@@ -42,14 +42,13 @@ function addProductCart(ref) {
     if(!selectedProduct) {
         selectedProduct = products.find((product) => product.ref === ref);
         cart.push(selectedProduct);
-    } else {
+    }
         cart.map(product => {
             if (product.ref === ref){
                 product.amount++;
             };
         }); 
-    }
-
+    
     Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -93,4 +92,3 @@ document.addEventListener("DOMContentLoaded", () => {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
     document.querySelector("#activateFunction").click(processOrder);
 }); 
-
